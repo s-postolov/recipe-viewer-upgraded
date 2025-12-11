@@ -4,7 +4,23 @@ import 'package:provider/provider.dart';
 import 'screens/categories_screen.dart';
 import 'providers/favorites_provider.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  //Test to check whether firebase firestore db works. 
+  //FirebaseFirestore.instance.collection('test').doc('check').set({
+  //'connected': true,
+  //'timestamp': DateTime.now(),
+  //});
+
   runApp(
     MultiProvider(
       providers: [
