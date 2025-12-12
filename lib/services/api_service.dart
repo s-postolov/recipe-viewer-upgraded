@@ -31,7 +31,6 @@ class ApiService {
     }
   }
 
-  // search globally by name (returns meals that match the query)
   Future<List<RecipeSummary>> searchRecipes(String query) async {
     final url = Uri.parse('$base/search.php?s=${Uri.encodeComponent(query)}');
     final res = await http.get(url);

@@ -30,9 +30,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
                 return RecipeCard(
                   recipe: recipe,
-                  onTap: () {
-                    // open recipe detail
-                  },
+                  onTap: () {},
                   isFavorite: true,
                   onFavoriteToggle: () {
                     setState(() {

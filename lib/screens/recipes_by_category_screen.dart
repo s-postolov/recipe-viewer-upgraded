@@ -113,7 +113,6 @@ class _RecipesByCategoryScreenState extends State<RecipesByCategoryScreen> {
                           );
                         },
 
-                        // NEW:
                         isFavorite: FavoriteRecipes().isFavorite(recipe.idRecipe),
                         onFavoriteToggle: () {
                           setState(() {
